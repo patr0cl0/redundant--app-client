@@ -4,7 +4,7 @@ const Form = ({ onSubmit }) => {
   const [text, setText] = useState('');
 
   return (
-    <div>
+    <form onSubmit={onSubmit(text)}>
       <div className="form-group mt-1">
         <input
           className="form-control"
@@ -18,11 +18,10 @@ const Form = ({ onSubmit }) => {
       <button
         type="submit"
         className="btn btn-secondary"
-        onClick={() => onSubmit(text)}
       >
         Enviar
       </button>
-    </div>
+    </form>
   );
 };
 
